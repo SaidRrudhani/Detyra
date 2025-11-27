@@ -1,66 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <title>Detyra 1</title>
 </head>
 <body>
-    <button onclick="
-        var emri = prompt('Shkruani emrin tuaj:');
-        var mosha = prompt('Shkruani moshën tuaj:');
-        if(emri && mosha){
-            alert('Përdoruesi: ' + emri + ' | Mosha: ' + mosha);
-        }
-    ">Kliko këtu</button>
 
-     <button onclick="
-        var num1 = Number(prompt('Shkruani numrin e parë:'));
-        var num2 = Number(prompt('Shkruani numrin e dytë:'));
-        var shuma = num1 + num2;
-        alert('Shuma e dy numrave është: ' + shuma);
-    ">Llogarit Shumën</button>
+<button onclick="merrTeDhenat()">Kliko këtu</button>
 
-        <button onclick="
-        var numri = Number(prompt('Shkruani një numër:'));
-        if(isNaN(numri)){
-            alert('Ju nuk keni dhënë një numër të vlefshëm!');
-        } else {
-            if(numri % 2 === 0){
-                alert('Numri ' + numri + ' është ÇIFT.');
-            } else {
-                alert('Numri ' + numri + ' është TEK.');
-            }
-        }
-    ">Kontrollo Numrin</button>
+<script>
+function merrTeDhenat() {
+    var emri = prompt("Shkruaj emrin:");
+    var mosha = prompt("Shkruaj moshën:");
+    alert("Emri: " + emri + " - Mosha: " + mosha);
+}
+</script>
+<button onclick="llogaritShumen()">Kliko për të futur numrat</button>
 
-        <button onclick="
-        var fjala1 = prompt('Shkruani fjalën e parë:');
-        var fjala2 = prompt('Shkruani fjalën e dytë:');
-        if(fjala1 && fjala2){
-            var fjalia = 'Ju shkruat: ' + fjala1 + ' ' + fjala2;
-            alert(fjalia);
-        } else {
-            alert('Duhet të shkruani dy fjalë!');
-        }
-    ">Bashko Fjalët</button>
+<script>
+function llogaritShumen() {
+    var num1 = Number(prompt("Shkruaj numrin e parë:"));
+    var num2 = Number(prompt("Shkruaj numrin e dytë:"));
 
-        <button onclick="
-        var fjala1 = prompt('Shkruani fjalën e parë:');
-        var fjala2 = prompt('Shkruani fjalën e dytë:');
-        if(fjala1 && fjala2){
-            alert('Fjala e përsëritur është: ' + fjala1 + ' ' + fjala2);
-        } else {
-            alert('Ju duhet të shkruani dy fjalë!');
-        }
-          <button onclick="{
-        var fjala1 = prompt('Shkruani fjalën e parë:');
-        var fjala2 = prompt('Shkruani fjalën e dytë:');
-        if(fjala1 && fjala2){
-            alert('Fjala e përsëritur është: ' + fjala1 + ' ' + fjala2);
-        } else {
-            alert('Ju duhet të shkruani dy fjalë!');
-        }
-    ">Përsërit Fjalën</button>
-          }
+    var shuma = num1 + num2;
+
+    alert("Shuma e numrave është: " + shuma);
+}
+</script>
+
+<button onclick="kontrolloNumrin()">Kontrollo numrin</button>
+
+<script>
+function kontrolloNumrin() {
+    var numri = Number(prompt("Shkruaj një numër:"));
+
+    if (numri % 2 === 0) {
+        alert("Numri është çift!");
+    } else {
+        alert("Numri është tek!");
+    }
+}
+</script>
+
+<button onclick="bashkoFjalet()">Bashko fjalët</button>
+
+<script>
+function bashkoFjalet() {
+    var fjala1 = prompt("Shkruaj fjalën e parë:");
+    var fjala2 = prompt("Shkruaj fjalën e dytë:");
+
+    var rezultati = fjala1 + " " + fjala2;
+
+    alert("Rezultati: " + rezultati);
+}
+</script>
+
+<button onclick="perseritFjalet()">Përsërit Fjalën</button>
+
+<script>
+function perseritFjalet() {
+    var fjala1 = prompt("Shkruaj fjalën e parë:");
+    var fjala2 = prompt("Shkruaj fjalën e dytë:");
+
+    alert("Fjala e përsëritur është: " + fjala1 + " " + fjala2);
+}
+</script>
+
+<button onclick="mengjesi()">Çfarë Hëngre për Mëngjes?</button>
+
+<script><
+
+function mengjesi() {
+    var ushqimi = prompt("Çfarë hëngre për mëngjes?");
+    var pija = prompt("Çfarë pive për mëngjes?");
+
+    alert("Ti hëngre " + ushqimi + " dhe pive " + pija + ".");
+}
+</script>
 
 
 </body>
