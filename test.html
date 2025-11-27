@@ -19,5 +19,19 @@
         alert('Shuma e dy numrave është: ' + shuma);
     ">Llogarit Shumën</button>
 
+        <button onclick="
+        var numri = Number(prompt('Shkruani një numër:'));
+        if(isNaN(numri)){
+            alert('Ju nuk keni dhënë një numër të vlefshëm!');
+        } else {
+            if(numri % 2 === 0){
+                alert('Numri ' + numri + ' është ÇIFT.');
+            } else {
+                alert('Numri ' + numri + ' është TEK.');
+            }
+        }
+    ">Kontrollo Numrin</button>
+
+
 </body>
 </html>
